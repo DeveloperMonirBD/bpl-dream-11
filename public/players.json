@@ -1,0 +1,102 @@
+[
+    {
+        "playerId": 1,
+        "name": "Virat Kohli",
+        "country": "India",
+        "image": "https://i.ibb.co.com/r33MBtp/Virat-Kohli.jpg",
+        "role": "Batsman",
+        "battingType": "Right-handed",
+        "bowlingType": "N/A",
+        "biddingPrice": 1500000
+    },
+    {
+        "playerId": 2,
+        "name": "Babar Azam",
+        "country": "Pakistan",
+        "image": "https://i.ibb.co.com/ZXL33qw/Babar-Azam.jpg",
+        "role": "Batsman",
+        "battingType": "Right-handed",
+        "bowlingType": "N/A",
+        "biddingPrice": 1300000
+    },
+    {
+        "playerId": 3,
+        "name": "Kane Williamson",
+        "country": "New Zealand",
+        "image": "https://i.ibb.co.com/GHrfzZ3/Kane-Williamson.jpg",
+        "role": "Batsman",
+        "battingType": "Right-handed",
+        "bowlingType": "N/A",
+        "biddingPrice": 1400000
+    },
+    {
+        "playerId": 4,
+        "name": "Ben Stokes",
+        "country": "England",
+        "image": "https://i.ibb.co.com/wWVKhmS/Ben-Stokes.jpg",
+        "role": "All-rounder",
+        "battingType": "Left-handed",
+        "bowlingType": "Right-arm fast",
+        "biddingPrice": 2000000
+    },
+    {
+        "playerId": 5,
+        "name": "Jasprit Bumrah",
+        "country": "India",
+        "image": "https://i.ibb.co.com/BnM6CQD/Jasprit-Bumrah.jpg",
+        "role": "Bowler",
+        "battingType": "Right-handed",
+        "bowlingType": "Right-arm fast",
+        "biddingPrice": 1800000
+    },
+    {
+        "playerId": 6,
+        "name": "David Warner",
+        "country": "Australia",
+        "image": "https://i.ibb.co.com/5vcvk2p/David-Warner.jpg",
+        "role": "Batsman",
+        "battingType": "Left-handed",
+        "bowlingType": "N/A",
+        "biddingPrice": 1600000
+    },
+    {
+        "playerId": 7,
+        "name": "Ravindra Jadeja",
+        "country": "India",
+        "image": "https://i.ibb.co.com/Jtcf2xr/Ravindra-Jadeja.jpg",
+        "role": "All-rounder",
+        "battingType": "Left-handed",
+        "bowlingType": "Left-arm orthodox",
+        "biddingPrice": 1700000
+    },
+    {
+        "playerId": 8,
+        "name": "Glenn Maxwell",
+        "country": "Australia",
+        "image": "https://i.ibb.co.com/02HrcrD/Glenn-Maxwell.jpg",
+        "role": "All-rounder",
+        "battingType": "Right-handed",
+        "bowlingType": "Right-arm off-spin",
+        "biddingPrice": 1450000
+    },
+    {
+        "playerId": 9,
+        "name": "Shahid Afridi",
+        "country": "Pakistan",
+        "image": "https://i.ibb.co.com/1R7M2g7/Shahid-Afridi.jpg",
+        "role": "All-rounder",
+        "battingType": "Right-handed",
+        "bowlingType": "Right-arm leg-spin",
+        "biddingPrice": 1200000
+    },
+    {
+        "playerId": 10,
+        "name": "Joe Root",
+        "country": "England",
+        "image": "https://i.ibb.co.com/wKNJ4jY/Joe-Root.jpg",
+        "role": "Batsman",
+        "battingType": "Right-handed",
+        "bowlingType": "N/A",
+        "biddingPrice": 1550000
+    }
+]
