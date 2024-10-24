@@ -1,0 +1,56 @@
+[
+    {
+        "recipe_id": "1",
+        "recipe_image": "https://i.ibb.co.com/cTct5HG/Chicken-Stir-Fry.jpg",
+        "recipe_name": "Chicken Stir Fry",
+        "short_description": "A quick and healthy chicken stir fry with vegetables.",
+        "ingredients": ["550 g chicken", "120 ml soy sauce", "200 g bell pepper", "100 g broccoli", "50 g onion"],
+        "preparing_time": "30 min",
+        "calories": "320 calories"
+    },
+    {
+        "recipe_id": "2",
+        "recipe_image": "https://i.ibb.co.com/yp6ZbVs/free-Vegetable-Pasta-blog-cover-img.jpg",
+        "recipe_name": "Vegetable Pasta",
+        "short_description": "A delicious pasta dish loaded with fresh vegetables.",
+        "ingredients": ["200 g pasta", "150 g cherry tomatoes", "100 g spinach", "50 g parmesan cheese", "30 ml olive oil"],
+        "preparing_time": "25 min",
+        "calories": "400 calories"
+    },
+    {
+        "recipe_id": "3",
+        "recipe_image": "https://i.ibb.co.com/8BvkjC7/Beef-Tacos.jpg",
+        "recipe_name": "Beef Tacos",
+        "short_description": "Spicy beef tacos topped with fresh salsa.",
+        "ingredients": ["300 g ground beef", "4 taco shells", "100 g lettuce", "50 g cheese", "50 g salsa"],
+        "preparing_time": "20 min",
+        "calories": "450 calories"
+    },
+    {
+        "recipe_id": "4",
+        "recipe_image": "https://i.ibb.co.com/6bJqFz1/Caesar-Salad.jpg",
+        "recipe_name": "Caesar Salad",
+        "short_description": "Classic Caesar salad with a creamy dressing.",
+        "ingredients": ["150 g romaine lettuce", "50 g croutons", "30 g parmesan cheese", "50 ml Caesar dressing", "10 g black pepper"],
+        "preparing_time": "15 min",
+        "calories": "250 calories"
+    },
+    {
+        "recipe_id": "5",
+        "recipe_image": "https://i.ibb.co.com/GQzz3fL/Mushroom-Risotto.jpg",
+        "recipe_name": "Mushroom Risotto",
+        "short_description": "Creamy risotto with mushrooms and herbs.",
+        "ingredients": ["300 g Arborio rice", "200 g mushrooms", "1 liter vegetable broth", "50 g onion", "50 g parmesan cheese"],
+        "preparing_time": "40 min",
+        "calories": "500 calories"
+    },
+    {
+        "recipe_id": "6",
+        "recipe_image": "https://i.ibb.co.com/47XD5bg/Chocolate-Cake.jpg",
+        "recipe_name": "Chocolate Cake",
+        "short_description": "Decadent chocolate cake perfect for dessert.",
+        "ingredients": ["200 g flour", "100 g cocoa powder", "200 g sugar", "150 g butter", "3 eggs"],
+        "preparing_time": "60 min",
+        "calories": "600 calories"
+    }
+]
