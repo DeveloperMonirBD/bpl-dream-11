@@ -4,6 +4,9 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 import Navbar from './components/Navbar';
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 function App() {
     const [isActive, setIsActive] = useState({
         cart: true,
@@ -12,29 +15,28 @@ function App() {
     const [price, setPrice] = useState(0);
     const [selectedProducts, setSelectedProducts] = useState([]);
 
-
-    const handleDelete = (playerId) => {
+    const handleDelete = playerId => {
+        toast.info('Delete the card');
         const remainingProducts = selectedProducts.filter(p => p.playerId != playerId);
         setSelectedProducts(remainingProducts);
     };
 
-    const handleSelectedProducts = (product) => {
+    const handleSelectedProducts = product => {
         const isexist = selectedProducts.find(p => p.playerId == product.playerId);
 
-
         if (isexist) {
-            alert('Already isExist');
+            toast.error('Already isExist');
+            // alert('Already isExist');
         } else {
             const newProducts = [...selectedProducts, product];
             setSelectedProducts(newProducts);
             setPrice(price - product.biddingPrice);
-        }  
-    }
-
+        }
+    };
 
     const handleIncreasePrice = () => {
         setPrice(price + 6000000);
-        alert('Added some money');
+        toast.success('Added some money');
     };
 
     const handleIsActiveState = status => {
@@ -53,7 +55,6 @@ function App() {
 
     return (
         <>
-            
             <Navbar price={price} />
             <Header handleIncreasePrice={handleIncreasePrice} />
             <CardContainer
@@ -64,6 +65,19 @@ function App() {
                 handleIsActiveState={handleIsActiveState}
             />
             <Footer />
+            <ToastContainer
+                position="top-center"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="colored"
+                transition:Bounce
+            />
         </>
     );
 }
