@@ -3,8 +3,7 @@ import { BsFillFlagFill } from 'react-icons/bs';
 import { FaUserInjured } from 'react-icons/fa';
 import { IoLogoUsd } from 'react-icons/io5';
 
-const SingleProduct = ({ product }) => {
-    console.log(product);
+const SingleProduct = ({ product, handleSelectedProducts }) => {
     const { name, country, image, role, battingType, bowlingType, biddingPrice } = product;
 
     return (
@@ -41,7 +40,9 @@ const SingleProduct = ({ product }) => {
                     </div>
 
                     <div className="card-actions ">
-                        <button className="btn">Choose Player</button>
+                        <button onClick={() => handleSelectedProducts(product)} className="btn">
+                            Choose Player
+                        </button>
                     </div>
                 </div>
             </div>

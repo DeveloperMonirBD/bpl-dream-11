@@ -4,14 +4,37 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 import Navbar from './components/Navbar';
 
-
 function App() {
     const [isActive, setIsActive] = useState({
         cart: true,
         status: 'available'
     });
-    
-    const handleIsActiveState = (status) => {
+    const [price, setPrice] = useState(0);
+    const [selectedProducts, setSelectedProducts] = useState([]);
+
+
+
+    const handleSelectedProducts = (product) => {
+        const isexist = selectedProducts.find(p => p.playerId == product.playerId);
+
+        if (isexist) {
+            alert('Already isExist');
+        } else {
+            const newProducts = [...selectedProducts, product];
+            setSelectedProducts(newProducts);
+        }  
+    }
+
+
+
+
+
+    const handleIncreasePrice = () => {
+        setPrice(price + 6000000);
+        alert('Addeded money');
+    };
+
+    const handleIsActiveState = status => {
         if (status == 'available') {
             setIsActive({
                 cart: true,
@@ -23,13 +46,13 @@ function App() {
                 status: 'selected'
             });
         }
-    }
-    
+    };
+
     return (
         <>
-            <Navbar />
-            <Header />
-            <CardContainer isActive={isActive} handleIsActiveState={handleIsActiveState} />
+            <Navbar price={price} />
+            <Header handleIncreasePrice={handleIncreasePrice} />
+            <CardContainer selectedProducts={selectedProducts} handleSelectedProducts={handleSelectedProducts} isActive={isActive} handleIsActiveState={handleIsActiveState} />
             <Footer />
         </>
     );

@@ -1,7 +1,7 @@
 import bannerImg from '../assets/banner-main.png';
 import shadowImg from '../assets/bg-shadow.png';
 
-const Header = () => {
+const Header = ({ handleIncreasePrice }) => {
     return (
         <div className="max-w-7xl mx-auto p-3">
             <div
@@ -18,7 +18,9 @@ const Header = () => {
                         <h1 className="text-2xl font-bold">Assemble Your Ultimate Dream 11 Cricket Team</h1>
                         <p className="mb-6 mt-4 ">Beyond Boundaries Beyond Limits</p>
                         <div className="border border-warning inline-block p-1 rounded-xl shadow-xl">
-                            <button className="btn  bg-gradient-to-r from-[#f180b1]  to-warning shadow-md text-lg">Claim Free Credit</button>
+                            <button onClick={handleIncreasePrice} className="btn  bg-gradient-to-r from-[#f180b1]  to-warning shadow-md text-lg">
+                                Claim Free Credit
+                            </button>
                         </div>
                     </div>
                 </div>

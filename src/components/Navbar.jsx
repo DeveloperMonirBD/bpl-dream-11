@@ -1,7 +1,7 @@
 import { TbCoinFilled } from 'react-icons/tb';
 import logo from '../assets/logo.png';
 
-const Navbar = () => {
+const Navbar = ({ price }) => {
     return (
         <div className="max-w-7xl mx-auto p-3">
             <div className="navbar bg-base-100">
@@ -54,7 +54,7 @@ const Navbar = () => {
                     {/* navnar button  */}
                     <div>
                         <a className="btn ">
-                            0 Coin
+                            {price} Coin
                             <span className="text-orange-300 text-lg font-bold">
                                 <TbCoinFilled />
                             </span>
