@@ -14,7 +14,7 @@ const Subscribe = () => {
                 <div className="md:mx-[135px] lg:mx-[390px]">
                     <div className="hero-content  text-center text-black flex flex-col ">
                         <div className="max-w-2xl">
-                            <h className="text-2xl font-bold">Subscribe to our Newsletter</h>
+                            <h1 className="text-2xl font-bold">Subscribe to our Newsletter</h1>
                             <p className="mb-6 mt-4 ">Get the latest updates and news right in your inbox!</p>
                         </div>
 
