@@ -13,25 +13,28 @@ function App() {
     const [selectedProducts, setSelectedProducts] = useState([]);
 
 
+    const handleDelete = (playerId) => {
+        const remainingProducts = selectedProducts.filter(p => p.playerId != playerId);
+        setSelectedProducts(remainingProducts);
+    };
 
     const handleSelectedProducts = (product) => {
         const isexist = selectedProducts.find(p => p.playerId == product.playerId);
+
 
         if (isexist) {
             alert('Already isExist');
         } else {
             const newProducts = [...selectedProducts, product];
             setSelectedProducts(newProducts);
+            setPrice(price - product.biddingPrice);
         }  
     }
 
 
-
-
-
     const handleIncreasePrice = () => {
         setPrice(price + 6000000);
-        alert('Addeded money');
+        alert('Added some money');
     };
 
     const handleIsActiveState = status => {
@@ -50,9 +53,16 @@ function App() {
 
     return (
         <>
+            
             <Navbar price={price} />
             <Header handleIncreasePrice={handleIncreasePrice} />
-            <CardContainer selectedProducts={selectedProducts} handleSelectedProducts={handleSelectedProducts} isActive={isActive} handleIsActiveState={handleIsActiveState} />
+            <CardContainer
+                handleDelete={handleDelete}
+                selectedProducts={selectedProducts}
+                handleSelectedProducts={handleSelectedProducts}
+                isActive={isActive}
+                handleIsActiveState={handleIsActiveState}
+            />
             <Footer />
         </>
     );

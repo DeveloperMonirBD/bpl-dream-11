@@ -2,7 +2,7 @@
 import AllProducts from '../AllProducts';
 import SelectedProducts from '../SelectedProducts';
 import './CardContainer.css';
-const CardContainer = ({ handleIsActiveState, isActive, handleSelectedProducts, selectedProducts }) => {
+const CardContainer = ({ handleIsActiveState, isActive, handleSelectedProducts, selectedProducts, handleDelete }) => {
     return (
         <div className="max-w-7xl mx-auto p-3 mt-10">
             <div className="flex justify-between items-center">
@@ -17,7 +17,7 @@ const CardContainer = ({ handleIsActiveState, isActive, handleSelectedProducts, 
                 </div>
             </div>
 
-            {isActive.cart ? <AllProducts handleSelectedProducts={handleSelectedProducts} /> : <SelectedProducts selectedProducts={selectedProducts} />}
+            {isActive.cart ? <AllProducts handleSelectedProducts={handleSelectedProducts} /> : <SelectedProducts handleDelete={handleDelete} selectedProducts={selectedProducts} />}
         </div>
     );
 };

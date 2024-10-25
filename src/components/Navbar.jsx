@@ -1,10 +1,11 @@
+/* eslint-disable react/prop-types */
 import { TbCoinFilled } from 'react-icons/tb';
 import logo from '../assets/logo.png';
 
 const Navbar = ({ price }) => {
     return (
-        <div className="max-w-7xl mx-auto p-3">
-            <div className="navbar bg-base-100">
+        <div className="sticky top-0  bg-white bg-opacity-50 backdrop-blur-sm shadow-sm z-10 ">
+            <div className="navbar max-w-7xl mx-auto p-3">
                 {/* hambargar  */}
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -35,7 +36,7 @@ const Navbar = ({ price }) => {
 
                 <div className="navbar-end">
                     <div className="hidden lg:flex">
-                        <ul className="menu menu-horizontal px-1 font-semibold text-slate-500">
+                        <ul className="menu menu-horizontal px-1 font-semibold text-slate-800">
                             <li>
                                 <a href="#">Home</a>
                             </li>
@@ -55,7 +56,7 @@ const Navbar = ({ price }) => {
                     <div>
                         <a className="btn ">
                             {price} Coin
-                            <span className="text-orange-300 text-lg font-bold">
+                            <span className="text-yellow-500 text-2xl font-bold">
                                 <TbCoinFilled />
                             </span>
                         </a>

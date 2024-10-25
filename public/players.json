@@ -73,7 +73,7 @@
         "playerId": 8,
         "name": "Glenn Maxwell",
         "country": "Australia",
-        "image": "https://i.ibb.co.com/02HrcrD/Glenn-Maxwell.jpg",
+        "image": "https://i.ibb.co.com/p0N8Qbk/Glenn-Maxwell.jpg",
         "role": "All-rounder",
         "battingType": "Right-handed",
         "bowlingType": "Right-arm off-spin",
@@ -98,5 +98,25 @@
         "battingType": "Right-handed",
         "bowlingType": "N/A",
         "biddingPrice": 1550000
+    },
+    {
+        "playerId": 11,
+        "name": "Rashid Khan",
+        "country": "Afghanistan",
+        "image": "https://i.ibb.co.com/wYQCGNM/Rashid-Khan.jpg",
+        "role": "Bowler",
+        "battingType": "Right-hand bat",
+        "bowlingType": "Leg spin",
+        "biddingPrice": 1900000
+    },
+    {
+        "playerId": 12,
+        "name": "Steve Smith",
+        "country": "Australia",
+        "image": "https://i.ibb.co.com/1LbW64T/Steve-Smith.jpg",
+        "role": "Batsman",
+        "battingType": "Right-hand bat",
+        "bowlingType": "N/A",
+        "biddingPrice": 1700000
     }
 ]
