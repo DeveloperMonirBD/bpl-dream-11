@@ -17,7 +17,9 @@ const Header = () => {
                         <img className="mx-auto mb-6" src={bannerImg} alt="banner img" />
                         <h className="text-2xl font-bold">Assemble Your Ultimate Dream 11 Cricket Team</h>
                         <p className="mb-6 mt-4 ">Beyond Boundaries Beyond Limits</p>
-                        <button className="btn btn-warning ">Claim Free Credit</button>
+                        <div className="border border-warning inline-block p-1 rounded-xl shadow-xl">
+                            <button className="btn  bg-gradient-to-r from-[#f180b1]  to-warning shadow-md text-lg">Claim Free Credit</button>
+                        </div>
                     </div>
                 </div>
             </div>
