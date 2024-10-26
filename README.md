@@ -39,7 +39,7 @@ contests, select their favorite players, and track their team's performance in r
 
 -   Private Github Repo Link : https://github.com/programming-hero-web-course1/b10a7-dream-11-DeveloperMonirBD
 
--   Live link to the deployed project :
+-   Live link to the deployed project : https://a7-bpl-dream-11-project.netlify.app/
 
 # React + Vite
 

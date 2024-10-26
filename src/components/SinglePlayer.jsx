@@ -3,8 +3,8 @@ import { BsFillFlagFill } from 'react-icons/bs';
 import { FaUserInjured } from 'react-icons/fa';
 import { IoLogoUsd } from 'react-icons/io5';
 
-const SingleProduct = ({ product, handleSelectedProducts }) => {
-    const { name, country, image, role, battingType, bowlingType, biddingPrice } = product;
+const SinglePlayer = ({ player, handleSelectedPlayers }) => {
+    const { name, country, image, role, battingType, bowlingType, biddingPrice } = player;
 
     return (
         <div className="card bg-base-100 border">
@@ -40,7 +40,7 @@ const SingleProduct = ({ product, handleSelectedProducts }) => {
                     </div>
 
                     <div className="card-actions ">
-                        <button onClick={() => handleSelectedProducts(product)} className="btn">
+                        <button onClick={() => handleSelectedPlayers(player)} className="btn">
                             Choose Player
                         </button>
                     </div>
@@ -50,4 +50,4 @@ const SingleProduct = ({ product, handleSelectedProducts }) => {
     );
 };
 
-export default SingleProduct;
+export default SinglePlayer;

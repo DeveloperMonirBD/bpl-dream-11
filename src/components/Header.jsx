@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import bannerImg from '../assets/banner-main.png';
 import shadowImg from '../assets/bg-shadow.png';
 

@@ -12,34 +12,33 @@ function App() {
         status: 'available'
     });
     const [price, setPrice] = useState(0);
-    const [selectedProducts, setSelectedProducts] = useState([]);
+    const [selectedPlayers, setSelectedPlayers] = useState([]);
 
     const handleDelete = playerId => {
-        const remainingProducts = selectedProducts.filter(p => p.playerId !== playerId);
-        setSelectedProducts(remainingProducts);
+        const remainingPlayers = selectedPlayers.filter(p => p.playerId !== playerId);
+        setSelectedPlayers(remainingPlayers);
     };
 
-    const handleSelectedProducts = product => {
+    const handleSelectedPlayers = player => {
+        const isExist = selectedPlayers.find(p => p.playerId === player.playerId);
 
-        const isExist = selectedProducts.find(p => p.playerId === product.playerId);
-
-        if (selectedProducts.length === 6) {
+        if (selectedPlayers.length === 6) {
             toast.error('Sorry !! You have already selected 6 players!');
-            return; // Prevent adding more products
+            return;
         }
 
-        if (product.biddingPrice > price) {
+        if (player.biddingPrice > price) {
             toast.error('Not enough money to buy this player. Claim some Credit');
             return;
         }
 
         if (isExist) {
-            toast.error(`Sorry !! ${product.name} is Already Exist`);
+            toast.error(`Sorry !! ${player.name} is Already Exist`);
         } else {
-            toast.success(`Congrats !! ${product.name} is now in your squared`);
-            const newProducts = [...selectedProducts, product];
-            setSelectedProducts(newProducts);
-            setPrice(price - product.biddingPrice);
+            toast.success(`Congrats !! ${player.name} is now in your squared`);
+            const newPlayers = [...selectedPlayers, player];
+            setSelectedPlayers(newPlayers);
+            setPrice(price - player.biddingPrice);
         }
     };
 
@@ -66,13 +65,7 @@ function App() {
         <>
             <Navbar price={price} />
             <Header handleIncreasePrice={handleIncreasePrice} />
-            <CardContainer
-                handleDelete={handleDelete}
-                selectedProducts={selectedProducts}
-                handleSelectedProducts={handleSelectedProducts}
-                isActive={isActive}
-                handleIsActiveState={handleIsActiveState}
-            />
+            <CardContainer handleDelete={handleDelete} selectedPlayers={selectedPlayers} handleSelectedPlayers={handleSelectedPlayers} isActive={isActive} handleIsActiveState={handleIsActiveState} />
             <Footer />
             <ToastContainer
                 position="top-center"
