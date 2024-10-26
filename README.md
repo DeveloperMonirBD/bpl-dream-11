@@ -12,6 +12,13 @@ contests, select their favorite players, and track their team's performance in r
     -   Styling: Tailwind CSS
     -   Database: Local Storage (fake data)
 
+## 5 key features of the project
+
+    -   Promise Return
+    -   Cleaner Syntax
+    -   Error Handling
+    -   Sequential Execution
+
 ## Technologies Used
 
     -   React-Toastify

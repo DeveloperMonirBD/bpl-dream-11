@@ -23,7 +23,7 @@ const SingleProduct = ({ product, handleSelectedProducts }) => {
                         <BsFillFlagFill />
                         <p>{country}</p>
                     </div>
-                    <button className="btn">{role}</button>
+                    <div className="bg-slate-50 p-2 rounded-lg shadow-sm">{role}</div>
                 </div>
                 <h3 className="font-semibold">Rating</h3>
 

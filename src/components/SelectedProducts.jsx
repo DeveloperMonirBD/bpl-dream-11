@@ -2,7 +2,7 @@
 import { RiDeleteBin6Line } from 'react-icons/ri';
 
 
-const SelectedProducts = ({ selectedProducts, handleDelete }) => {
+const SelectedProducts = ({ selectedProducts, handleDelete, handleAddMorePlayer }) => {
     return (
         <div className="mt-10">
             {selectedProducts.map(product => (
@@ -14,7 +14,7 @@ const SelectedProducts = ({ selectedProducts, handleDelete }) => {
                             </div>
                             <div className="space-y-2">
                                 <p className="text-xl md:text-2xl font-semibold">{product.name}</p>
-                                <p>{product.battingType}</p>
+                                <p>{product.role}</p>
                             </div>
                         </div>
 
@@ -24,6 +24,10 @@ const SelectedProducts = ({ selectedProducts, handleDelete }) => {
                     </div>
                 </div>
             ))}
+
+            <button onClick={handleAddMorePlayer} href="#" className="btn bg-gradient-to-r from-[#f180b1]  to-warning shadow-md text-lg">
+                Add More Player
+            </button>
         </div>
     );
 };

@@ -13,6 +13,10 @@ const CardContainer = ({ handleIsActiveState, isActive, handleSelectedProducts, 
         }
     }, [selectedProducts]);
 
+    const handleAddMorePlayer = () => {
+        handleIsActiveState('available');
+    }
+
     return (
         <>
             <div className="max-w-7xl mx-auto p-3 mt-10">
@@ -27,7 +31,11 @@ const CardContainer = ({ handleIsActiveState, isActive, handleSelectedProducts, 
                         </button>
                     </div>
                 </div>
-                {isActive.cart ? <AllProducts handleSelectedProducts={handleSelectedProducts} /> : <SelectedProducts handleDelete={handleDelete} selectedProducts={selectedProducts} />}
+                {isActive.cart ? (
+                    <AllProducts handleSelectedProducts={handleSelectedProducts} />
+                ) : (
+                    <SelectedProducts handleDelete={handleDelete} selectedProducts={selectedProducts} handleAddMorePlayer={handleAddMorePlayer} />
+                )}
             </div>
         </>
     );

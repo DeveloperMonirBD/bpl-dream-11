@@ -36,7 +36,7 @@ const Navbar = ({ price }) => {
 
                 <div className="navbar-end">
                     <div className="hidden lg:flex">
-                        <ul className="menu menu-horizontal px-1 font-semibold text-slate-800">
+                        <ul className="menu menu-horizontal px-1 font-bold text-slate-800">
                             <li>
                                 <a href="#">Home</a>
                             </li>
@@ -54,9 +54,9 @@ const Navbar = ({ price }) => {
 
                     {/* navnar button  */}
                     <div>
-                        <a className="btn ">
+                        <a className="btn font-bold bg-transparent">
                             {price} Coin
-                            <span className="text-yellow-500 text-2xl font-bold">
+                            <span className="text-yellow-500 text-3xl font-bold">
                                 <TbCoinFilled />
                             </span>
                         </a>

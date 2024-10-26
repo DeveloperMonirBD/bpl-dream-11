@@ -15,7 +15,6 @@ function App() {
     const [selectedProducts, setSelectedProducts] = useState([]);
 
     const handleDelete = playerId => {
-        toast.success('You have deleted the player');
         const remainingProducts = selectedProducts.filter(p => p.playerId !== playerId);
         setSelectedProducts(remainingProducts);
     };
@@ -24,14 +23,14 @@ function App() {
         const isExist = selectedProducts.find(p => p.playerId === product.playerId);
 
         if (product.biddingPrice > price) {
-            toast.warning('Insufficient funds! Please add more money.');
+            toast.error('Not enough money to buy this player. Claim some Credit');
             return;
         }
 
         if (isExist) {
-            toast.error('Player already selected');
+            toast.error('Player Already Exist');
         } else {
-            toast.success('Successfully, You have selected');
+            toast.success(`Congrats !! ${product.name} is now in your squared`);
             const newProducts = [...selectedProducts, product];
             setSelectedProducts(newProducts);
             setPrice(price - product.biddingPrice);
@@ -40,7 +39,7 @@ function App() {
 
     const handleIncreasePrice = () => {
         setPrice(price + 6000000);
-        toast.success('Wow! You have added some money');
+        toast.success('Credit Added to your Account');
     };
 
     const handleIsActiveState = status => {
@@ -71,7 +70,7 @@ function App() {
             <Footer />
             <ToastContainer
                 position="top-center"
-                autoClose={3000}
+                autoClose={5000}
                 hideProgressBar={false}
                 newestOnTop={false}
                 closeOnClick
@@ -79,7 +78,7 @@ function App() {
                 pauseOnFocusLoss
                 draggable
                 pauseOnHover
-                theme="colored"
+                theme="light"
                 transition:Bounce
             />
         </>
