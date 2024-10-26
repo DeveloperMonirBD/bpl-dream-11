@@ -24,15 +24,20 @@ function App() {
     const handleSelectedProducts = product => {
         const isexist = selectedProducts.find(p => p.playerId == product.playerId);
 
+        if (selectedProducts.length === 6) {
+            toast.warning('You have already selected 6 players!');
+            return; // Prevent adding more products
+        }
+
         if (isexist) {
-            toast.error('Already isExist');
-            // alert('Already isExist');
+            toast.error('Player already selected');
         } else {
             const newProducts = [...selectedProducts, product];
             setSelectedProducts(newProducts);
             setPrice(price - product.biddingPrice);
         }
     };
+
 
     const handleIncreasePrice = () => {
         setPrice(price + 6000000);
@@ -67,7 +72,7 @@ function App() {
             <Footer />
             <ToastContainer
                 position="top-center"
-                autoClose={5000}
+                autoClose={3000}
                 hideProgressBar={false}
                 newestOnTop={false}
                 closeOnClick
