@@ -28,7 +28,7 @@ function App() {
         }
 
         if (isExist) {
-            toast.error('Player Already Exist');
+            toast.error(`Sorry !! ${product.name} is Already Exist`);
         } else {
             toast.success(`Congrats !! ${product.name} is now in your squared`);
             const newProducts = [...selectedProducts, product];
