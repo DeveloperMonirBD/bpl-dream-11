@@ -20,7 +20,13 @@ function App() {
     };
 
     const handleSelectedProducts = product => {
+
         const isExist = selectedProducts.find(p => p.playerId === product.playerId);
+
+        if (selectedProducts.length === 6) {
+            toast.error('Sorry !! You have already selected 6 players!');
+            return; // Prevent adding more products
+        }
 
         if (product.biddingPrice > price) {
             toast.error('Not enough money to buy this player. Claim some Credit');

@@ -1,10 +1,10 @@
 /* eslint-disable react/prop-types */
+import { useEffect } from 'react';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import AllProducts from '../AllProducts';
 import SelectedProducts from '../SelectedProducts';
-import {toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import './CardContainer.css';
-import { useEffect } from 'react';
 
 const CardContainer = ({ handleIsActiveState, isActive, handleSelectedProducts, selectedProducts, handleDelete }) => {
     useEffect(() => {
@@ -15,7 +15,7 @@ const CardContainer = ({ handleIsActiveState, isActive, handleSelectedProducts, 
 
     const handleAddMorePlayer = () => {
         handleIsActiveState('available');
-    }
+    };
 
     return (
         <>
