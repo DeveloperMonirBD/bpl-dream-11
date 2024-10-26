@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import AllProducts from '../AllProducts';
 import SelectedProducts from '../SelectedProducts';
-import { ToastContainer, toast } from 'react-toastify';
+import {toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './CardContainer.css';
 import { useEffect } from 'react';
@@ -29,19 +29,6 @@ const CardContainer = ({ handleIsActiveState, isActive, handleSelectedProducts, 
                 </div>
                 {isActive.cart ? <AllProducts handleSelectedProducts={handleSelectedProducts} /> : <SelectedProducts handleDelete={handleDelete} selectedProducts={selectedProducts} />}
             </div>
-            <ToastContainer
-                position="top-center"
-                autoClose={3000}
-                hideProgressBar={false}
-                newestOnTop={false}
-                closeOnClick
-                rtl={false}
-                pauseOnFocusLoss
-                draggable
-                pauseOnHover
-                theme="colored"
-                transition:Bounce
-            />
         </>
     );
 };

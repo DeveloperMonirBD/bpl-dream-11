@@ -1,11 +1,10 @@
 import { useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import CardContainer from './components/CardContainer/CardContainer';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Navbar from './components/Navbar';
-
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
     const [isActive, setIsActive] = useState({
@@ -16,36 +15,36 @@ function App() {
     const [selectedProducts, setSelectedProducts] = useState([]);
 
     const handleDelete = playerId => {
-        toast.info('Delete the card');
-        const remainingProducts = selectedProducts.filter(p => p.playerId != playerId);
+        toast.success('You have deleted the player');
+        const remainingProducts = selectedProducts.filter(p => p.playerId !== playerId);
         setSelectedProducts(remainingProducts);
     };
 
     const handleSelectedProducts = product => {
-        const isexist = selectedProducts.find(p => p.playerId == product.playerId);
+        const isExist = selectedProducts.find(p => p.playerId === product.playerId);
 
-        if (selectedProducts.length === 6) {
-            toast.warning('You have already selected 6 players!');
-            return; // Prevent adding more products
+        if (product.biddingPrice > price) {
+            toast.warning('Insufficient funds! Please add more money.');
+            return;
         }
 
-        if (isexist) {
+        if (isExist) {
             toast.error('Player already selected');
         } else {
+            toast.success('Successfully, You have selected');
             const newProducts = [...selectedProducts, product];
             setSelectedProducts(newProducts);
             setPrice(price - product.biddingPrice);
         }
     };
 
-
     const handleIncreasePrice = () => {
         setPrice(price + 6000000);
-        toast.success('Added some money');
+        toast.success('Wow! You have added some money');
     };
 
     const handleIsActiveState = status => {
-        if (status == 'available') {
+        if (status === 'available') {
             setIsActive({
                 cart: true,
                 status: 'available'
